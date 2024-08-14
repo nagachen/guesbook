@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<div class="card mt-2">
+    <div class="card-header">
+        <div class="font-weight-bold"><i class="fas fa-file-alt"></i>{{message.subject}}</div>
+    </div>
+    <div class="card-body">
+        <div class="card-text">{{message.content|linebreaks}}</div>
+    </div>
+    <div class="card-footer d-flex justify-content-between">
+        <small class="text-muted"><i class="fas fa-user"></i>{{message.user}}</small>
+        <small class="text-muted"><i class="fas fa-clock"></i>{{ message.publication_date|date:"Y/m/d H:i" }}</small>
+    </div>
+</div>
+
+{%endblock%}
